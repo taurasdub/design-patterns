@@ -29,21 +29,25 @@ class Cook {
   constructor(food) {
     this.food = food;
   }
-
-  prepareFood() {
-    return `type of Cook, can prepare: ${this.food.getType()}`;
-  }
 }
 
 class SweetCook extends Cook {
   constructor(sweet) {
     super(sweet);
   }
+
+  prepareFood() {
+    return `Sweet cook can prepare: ${this.food.getType()}`;
+  }
 }
 
 class AperitiveCook extends Cook {
   constructor(aperitive) {
     super(aperitive);
+  }
+
+  prepareFood() {
+    return `Aperitive cook can prepare: ${this.food.getType()}`;
   }
 }
 
