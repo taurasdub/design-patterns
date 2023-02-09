@@ -25,6 +25,18 @@ class Aperitive extends Food {
   }
 }
 
+class MainDish extends Food {
+  constructor() {
+    super("Main dish");
+  }
+}
+
+class HotDish extends Food {
+  constructor() {
+    super("Hot dish");
+  }
+}
+
 class Cook {
   constructor(food) {
     this.food = food;
@@ -51,10 +63,36 @@ class AperitiveCook extends Cook {
   }
 }
 
+class MainCook extends Cook {
+  constructor(mainDish) {
+    super(mainDish);
+  }
+
+  prepareFood() {
+    return `Main cook can prepare: ${this.food.getType()}`;
+  }
+}
+
+class HotCook extends Cook {
+  constructor(hotDish) {
+    super(hotDish);
+  }
+
+  prepareFood() {
+    return `Hot cook can prepare: ${this.food.getType()}`;
+  }
+}
+
 const sweet = new Sweet();
 const aperitive = new Aperitive();
+const mainDish = new MainDish();
+const hotDish = new HotDish();
 
 const sweetCook = new SweetCook(sweet);
 const aperitiveCook = new AperitiveCook(aperitive);
+const mainCook = new MainCook(mainDish);
+const hotCook = new HotCook(hotDish);
 console.log(sweetCook.prepareFood());
 console.log(aperitiveCook.prepareFood());
+console.log(mainCook.prepareFood());
+console.log(hotCook.prepareFood());
