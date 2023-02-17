@@ -44,40 +44,24 @@ class Cook {
 }
 
 class SweetCook extends Cook {
-  constructor(sweet) {
-    super(sweet);
-  }
-
   prepareFood() {
     return `Sweet cook can prepare: ${this.food.getType()}`;
   }
 }
 
 class AperitiveCook extends Cook {
-  constructor(aperitive) {
-    super(aperitive);
-  }
-
   prepareFood() {
     return `Aperitive cook can prepare: ${this.food.getType()}`;
   }
 }
 
 class MainCook extends Cook {
-  constructor(mainDish) {
-    super(mainDish);
-  }
-
   prepareFood() {
     return `Main cook can prepare: ${this.food.getType()}`;
   }
 }
 
 class HotCook extends Cook {
-  constructor(hotDish) {
-    super(hotDish);
-  }
-
   prepareFood() {
     return `Hot cook can prepare: ${this.food.getType()}`;
   }
